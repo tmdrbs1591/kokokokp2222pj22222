@@ -35,9 +35,11 @@ public class ButtonManaer : MonoBehaviour
                 SceneManager.LoadScene("CharacterSelect");
                 break;
             case "AssassinBtn":
-                SceneManager.LoadScene("AsScene");
+                SceneManager.LoadScene("main");
                 break;
-
+            case "WizardBtn":
+                SceneManager.LoadScene("WZD");
+                break;
 
 
         }
