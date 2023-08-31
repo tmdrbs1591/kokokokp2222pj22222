@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VolumeController : MonoBehaviour
@@ -13,6 +15,7 @@ public class VolumeController : MonoBehaviour
         if (isBGM)
         {
             slider.value = SoundManager.Instance.bgm.volume;
+            
         }
         else
         {
@@ -27,4 +30,6 @@ public class VolumeController : MonoBehaviour
 
         });
     }
+
+    
 }

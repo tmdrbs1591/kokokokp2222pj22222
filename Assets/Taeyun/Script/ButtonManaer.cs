@@ -40,6 +40,21 @@ public class ButtonManaer : MonoBehaviour
             case "WizardBtn":
                 SceneManager.LoadScene("WZD");
                 break;
+            case "GuideBtn":
+                SceneManager.LoadScene("GuideScene");
+                break;
+            case "NextBtn_1":
+                SceneManager.LoadScene("GuideScene2");
+                break;
+            case "NextBtn_2":
+                SceneManager.LoadScene("GuideScene3");
+                break;
+            case "BackBtn_1":
+                SceneManager.LoadScene("GuideScene");
+                break;
+            case "BackBtn_2":
+                SceneManager.LoadScene("GuideScene2");
+                break;
 
 
         }

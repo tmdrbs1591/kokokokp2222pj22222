@@ -21,8 +21,17 @@ EditorBuildSettings:
     path: Assets/Taeyun/tyScenes/OptionScene.unity
     guid: c2f9f206b29f8a746b8f3c3ecce188ed
   - enabled: 1
+    path: Assets/Taeyun/tyScenes/GuideScene.unity
+    guid: eebd1acea78ddcf44a42ff2072fb7d13
+  - enabled: 1
     path: Assets/Taeyun/tyScenes/TitleScene.unity
     guid: 008de3b2ba272ac4aaf07501878cd098
+  - enabled: 1
+    path: Assets/Taeyun/tyScenes/GuideScene2.unity
+    guid: 2fceb3c410000c649849447d1cd75a38
+  - enabled: 1
+    path: Assets/Taeyun/tyScenes/GuideScene3.unity
+    guid: a43e7063a97f1954dbff5ce4abcd8c24
   - enabled: 1
     path: Assets/Scenes/WZD.unity
     guid: a745318859cb6924a9aa14b89ff72ef0
