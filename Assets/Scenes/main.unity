@@ -1286,9 +1286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPrefab: {fileID: 1192750178705488145, guid: 3ab0f6e9c8b7f964c84fa1cf0a695aa5, type: 3}
+  bossPrefab: {fileID: 1192750178705488145, guid: e6a0f75eb1807b343a3457dc8bf26228, type: 3}
   spawnPoint: {fileID: 1590832308}
-  minSpawnInterval: 4
-  maxSpawnInterval: 5
+  minSpawnInterval: 10
+  maxSpawnInterval: 15
+  tower: {fileID: 1649283663}
+  bossThreshold: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,9 +1965,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPrefab: {fileID: 1192750178705488145, guid: 3ab0f6e9c8b7f964c84fa1cf0a695aa5, type: 3}
+  bossPrefab: {fileID: 6305284635751621624, guid: fba7102dab64b5c4fb0691e9202b2a86, type: 3}
   spawnPoint: {fileID: 578501036}
-  minSpawnInterval: 4
-  maxSpawnInterval: 5
+  minSpawnInterval: 10
+  maxSpawnInterval: 15
+  tower: {fileID: 2024943868}
+  bossThreshold: 10
 --- !u!1 &1261818073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,7 +2679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed3596e7978e3445bf8898d759e39ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Thp: 10
+  Thp: 20
   flashDuration: 0.2
 --- !u!50 &1649283660
 Rigidbody2D:
@@ -3337,7 +3343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed3596e7978e3445bf8898d759e39ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Thp: 10
+  Thp: 20
   flashDuration: 0.2
 --- !u!61 &2024943866
 BoxCollider2D:
