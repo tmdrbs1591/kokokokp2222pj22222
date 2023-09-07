@@ -18,10 +18,18 @@ public class playermove : MonoBehaviour
     private Animator anim;
     private float curTime;
     public float coolTime = 0.5f;
-    public float jumpPower;
     public float qSkillVolume = 0.5f;
     public AudioClip rSkillSound;
     public float rSkillSoundVolume = 0.5f;
+    public float qSkillCooldown = 5.0f; 
+    private float qSkillTimer = 0.0f;
+    public float wSkillCooldown = 5.0f;
+    private float wSkillTimer = 0.0f;
+    public float eSkillCooldown = 1.5f;
+    private float eSkillTimer = 0.0f;
+    public float rSkillCooldown = 10.0f;
+    private float rSkillTimer = 0.0f;
+
 
 
     public AudioClip swordSwingSound;
@@ -47,25 +55,29 @@ public class playermove : MonoBehaviour
 
         originalLayer = gameObject.layer; // 플레이어의 원래 레이어 저장
     }
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Coin")
+        {
+            GameManager.instance.IncreaseCoin();
+            Destroy(other.gameObject);
+        }
+    }
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && !anim.GetBool("isjumping"))
-        {
-            rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            anim.SetBool("isjumping", true);
-        }
+     
 
         float moveDirection = Input.GetAxis("Horizontal");
-
-        if (Input.GetKeyDown(KeyCode.E) && !isDashing)
+        if (eSkillTimer <= 0)
         {
-            isDashing = true;
-            dashTimer = dashDuration;
+            if (Input.GetKeyDown(KeyCode.E) && !isDashing)
+            {
+                isDashing = true;
+                dashTimer = dashDuration;
 
-            PlayDashSound();
+                PlayDashSound();
+            }
         }
-
         if (isDashing)
         {
             dashTimer -= Time.deltaTime;
@@ -111,6 +123,12 @@ public class playermove : MonoBehaviour
                     if (collider.tag == "Enemy")
                     {
                         collider.GetComponent<Monster>().TakeDamage(1);
+
+                    }
+                    if(collider.tag == "Tower")
+                    {
+                        collider.GetComponent<TowerHp>().TakeDamage(1);
+
                     }
                 }
                 anim.SetTrigger("atk");
@@ -125,7 +143,7 @@ public class playermove : MonoBehaviour
             curTime -= Time.deltaTime;
         }
 
-        if (curTime <= 0)
+        if (qSkillTimer <= 0)
         {
             if (Input.GetKey(KeyCode.Q))
             {
@@ -141,33 +159,37 @@ public class playermove : MonoBehaviour
                     }
                 }
                 anim.SetTrigger("Qsk");
-                curTime = coolTime;
+                qSkillTimer = qSkillCooldown;
                 StartCoroutine(DealDamageOverTime(1, 0.7f, 0.1f));
 
                 PlayQSFX();
 
                 StartCoroutine(ResetPlayerLayer(2f));
+               
             }
         }
         else
         {
-            curTime -= Time.deltaTime;
+            qSkillTimer -= Time.deltaTime;
         }
-        if (curTime <= 0)
+
+       
+        if (rSkillTimer <= 0)
         {
             if (!anim.GetBool("isjumping") && Input.GetKey(KeyCode.R))
             {
                 anim.SetTrigger("Rsk");
-                curTime = coolTime;
+                rSkillTimer = rSkillCooldown;
+               
                 PlayRSFX();
             }
         }
         else
         {
-            curTime -= Time.deltaTime;
+            rSkillTimer -= Time.deltaTime;
         }
 
-        if (curTime <= 0)
+        if (eSkillTimer <= 0)
         {
             if (Input.GetKey(KeyCode.E) && Input.GetAxis("Horizontal") != 0)
             {
@@ -175,7 +197,8 @@ public class playermove : MonoBehaviour
                 gameObject.layer = LayerMask.NameToLayer("skill");
 
                 anim.SetTrigger("Esk");
-                curTime = coolTime;
+               eSkillTimer =eSkillCooldown;
+               
 
                 StartCoroutine(ResetPlayerLayer(2f));
 
@@ -183,10 +206,10 @@ public class playermove : MonoBehaviour
         }
         else
         {
-            curTime -= Time.deltaTime;
+            eSkillTimer -= Time.deltaTime;
         }
 
-        if (curTime <= 0)
+        if (wSkillTimer <= 0)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -202,7 +225,8 @@ public class playermove : MonoBehaviour
                 }
 
                 anim.SetTrigger("Wsk");
-                curTime = coolTime;
+
+                wSkillTimer = wSkillCooldown;
                 StartCoroutine(DealDamageOverTime(1, 0.7f, 0.1f));
 
                 PlayWSFX();
@@ -213,7 +237,7 @@ public class playermove : MonoBehaviour
         }
         else
         {
-            curTime -= Time.deltaTime;
+            wSkillTimer -= Time.deltaTime;
         }
     }
     private void PlaySwordSwingSound()
@@ -304,5 +328,6 @@ public class playermove : MonoBehaviour
         yield return new WaitForSeconds(delay);
         gameObject.layer = originalLayer;
     }
+
 }
 

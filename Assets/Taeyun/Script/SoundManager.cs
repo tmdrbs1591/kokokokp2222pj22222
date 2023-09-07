@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] bgmList;
     public AudioSource bgm;
     public AudioSource sfx;
-    
+
 
     private float bgmVolume;
     private float sfxVolume;
@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            
+
         }
         else
         {
@@ -34,7 +34,7 @@ public class SoundManager : MonoBehaviour
 
     public void Start()
     {
-        
+
         bgm.Play();
     }
 

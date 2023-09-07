@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections;
 public class Monster : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject coin;
+
     public float moveSpeed = 3f;
     public float deathDelay = 1.5f;
     public AudioClip hitSound;
@@ -48,7 +51,7 @@ public class Monster : MonoBehaviour
             else if (moveDirection.x < 0)
                 transform.localScale = new Vector3(4f, 4f, 4f);
 
-           
+
         }
     }
 
@@ -59,8 +62,8 @@ public class Monster : MonoBehaviour
             isPlayerInAttackRange = true; // 플레이어가 공격 범위 내에 있음을 표시
             StartCoroutine(AttackCoroutine()); // 일정 주기로 공격하는 코루틴 실행
 
-            
-            
+
+
         }
         else if (!isDying && (collision.gameObject.CompareTag("playertower")))
         {
@@ -68,6 +71,7 @@ public class Monster : MonoBehaviour
             StartCoroutine(TowerAttackCoroutine());
         }
     }
+    
 
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -86,14 +90,14 @@ public class Monster : MonoBehaviour
     {
         while (isPlayerInAttackRange)
         {
-            animator.SetTrigger("Attack"); 
-            yield return new WaitForSeconds(attackInterval); 
+            animator.SetTrigger("Attack");
+            yield return new WaitForSeconds(attackInterval);
 
-            
+
             PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(1); 
+                playerHealth.TakeDamage(1);
             }
         }
     }
@@ -101,14 +105,14 @@ public class Monster : MonoBehaviour
     {
         while (isPlayerTowerInAttackRange)
         {
-            animator.SetTrigger("Attack"); 
-            yield return new WaitForSeconds(attackInterval); 
+            animator.SetTrigger("Attack");
+            yield return new WaitForSeconds(attackInterval);
 
-            
+
             TowerHealth towerHealth = playertower.GetComponent<TowerHealth>();
             if (towerHealth != null)
             {
-                towerHealth.TakeDamage(1); 
+                towerHealth.TakeDamage(1);
             }
         }
     }
@@ -124,6 +128,8 @@ public class Monster : MonoBehaviour
         {
             Hp = 0;
             Die();
+            Instantiate(coin, transform.position,Quaternion.identity);
+
         }
         else
         {
@@ -160,9 +166,13 @@ public class Monster : MonoBehaviour
         animator.SetTrigger("Die");
         PlayDeathSound();
         PlayHitSound();
-        Invoke("Disappear", deathDelay);
+        StartCoroutine(DestroyWithDelay(deathDelay));
     }
-
+    private IEnumerator DestroyWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+    }
     private void Disappear()
     {
         gameObject.SetActive(false);

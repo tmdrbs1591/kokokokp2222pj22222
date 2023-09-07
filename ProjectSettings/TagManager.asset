@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - playertower
+  - Gold
+  - Coin
+  - Tower
   layers:
   - Default
   - TransparentFX
@@ -19,8 +22,8 @@ TagManager:
   - playertower
   - Player
   - EnemyTower
-  - 
-  - 
+  - Coin
+  - ground
   - 
   - 
   - 

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 10.0f;
-    public float lifeTime = 2.0f; // 총알의 수명
+    public float lifeTime = 0.8f; // 총알의 수명
 
     private float direction = 1.0f; // 총알 방향 (1 오른쪽, -1 왼쪽)
 
@@ -46,7 +46,17 @@ public class Bullet : MonoBehaviour
             Monster monster = collision.GetComponent<Monster>();
             if (monster != null)
             {
+                
                 monster.TakeDamage(1); // 몬스터의 체력을 감소시킴
+                Destroy(gameObject); // 총알을 삭제
+            }
+        }
+        if (collision.CompareTag("Tower"))
+        {
+            TowerHp tower = collision.GetComponent<TowerHp>();
+            if (tower != null)  
+            {
+                tower.TakeDamage(1); 
                 Destroy(gameObject); // 총알을 삭제
             }
         }

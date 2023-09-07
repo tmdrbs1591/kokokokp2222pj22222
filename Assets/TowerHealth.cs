@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerHealth : MonoBehaviour
 {
+    [SerializeField]
+    private Slider hpbar;
     public int maxHealth = 100;
     public int currentHealth;
 
@@ -17,7 +20,15 @@ public class TowerHealth : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
     }
+    void Update()
+    {
+        HandleHp(); // 체력바 업데이트
+    }
 
+    private void HandleHp()
+    {
+        hpbar.value = (float)currentHealth / (float)maxHealth;
+    }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -28,6 +39,7 @@ public class TowerHealth : MonoBehaviour
         {
 
         }
+        HandleHp();
     }
 
     private IEnumerator DamageEffect()
