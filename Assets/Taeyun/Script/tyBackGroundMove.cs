@@ -15,9 +15,9 @@ public class tyBackGroundMove : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector2(-movespeed, rb.velocity.y);//리지디드바디에 벨로시티값을 내가 정한 벡터값으로 수정(왼쪽으로 가니까 -)
+        rb.velocity = new Vector2(-movespeed, rb.velocity.y);
     }
-    private void OnBecameInvisible()//오브젝트가 메인카메라 밖으로 나갔을떄 실행하는 함수
+    private void OnBecameInvisible()
     {
         obj.transform.position = new Vector3(26.41f, 0f, 0f);
     }
