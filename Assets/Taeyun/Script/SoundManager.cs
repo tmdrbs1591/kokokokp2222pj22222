@@ -19,7 +19,7 @@ public class SoundManager : MonoBehaviour
     public void Awake()
     {
         bgm = GetComponent<AudioSource>();
-        if (Instance == null)
+        if (null == Instance)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
