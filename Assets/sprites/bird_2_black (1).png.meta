@@ -75,7 +75,7 @@ TextureImporter:
       213: 2763799705182799230
     second: bird_2_black (1)_23
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -92,10 +92,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -134,6 +136,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -145,6 +149,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -157,6 +162,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -676,9 +708,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      bird_2_black (1)_0: -5193309528845548817
+      bird_2_black (1)_1: -4225277350290198329
+      bird_2_black (1)_10: -3681135243167709139
+      bird_2_black (1)_11: -4120020155641821353
+      bird_2_black (1)_12: -5643127490337310304
+      bird_2_black (1)_13: 3976902809005666358
+      bird_2_black (1)_14: 8648386492131292817
+      bird_2_black (1)_15: 9086514339823822297
+      bird_2_black (1)_16: -5745230360735334852
+      bird_2_black (1)_17: -8463925655022120066
+      bird_2_black (1)_18: -366267360109729035
+      bird_2_black (1)_19: 5110161639236776571
+      bird_2_black (1)_2: -3846581882491053725
+      bird_2_black (1)_20: 7099490678147880467
+      bird_2_black (1)_21: -6498433645221785771
+      bird_2_black (1)_22: -1464932186200016919
+      bird_2_black (1)_23: 2763799705182799230
+      bird_2_black (1)_3: 7498643243200554245
+      bird_2_black (1)_4: 2570571359475721900
+      bird_2_black (1)_5: -2704899631445861543
+      bird_2_black (1)_6: -1077789335601208340
+      bird_2_black (1)_7: 5239617998508659620
+      bird_2_black (1)_8: -6586824181903394476
+      bird_2_black (1)_9: 3951062726117704018
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

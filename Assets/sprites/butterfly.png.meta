@@ -363,7 +363,7 @@ TextureImporter:
       213: -7379583416401745750
     second: butterfly_119
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -380,10 +380,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -422,6 +424,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -433,6 +437,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -445,6 +450,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2980,9 +3012,129 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      butterfly_0: -7664605693119280686
+      butterfly_1: -8249794775284251456
+      butterfly_10: -3323025679951082699
+      butterfly_100: 8083775912712174073
+      butterfly_101: -1283395091323404307
+      butterfly_102: 8669855662156002029
+      butterfly_103: 8194649523025451918
+      butterfly_104: -6578725375961680210
+      butterfly_105: 2539742044068622012
+      butterfly_106: 542197651737538776
+      butterfly_107: -3923428443113568563
+      butterfly_108: -4230977214765926121
+      butterfly_109: -735610346356302921
+      butterfly_11: 3685133884342171470
+      butterfly_110: 6439873968883377756
+      butterfly_111: -305291120710900021
+      butterfly_112: 5101174259123333314
+      butterfly_113: 5314564328336087509
+      butterfly_114: -9147961411593678945
+      butterfly_115: 264393899337986188
+      butterfly_116: 2904054075304041860
+      butterfly_117: -8489632357258623872
+      butterfly_118: 7619062093241874048
+      butterfly_119: -7379583416401745750
+      butterfly_12: 2375159261384531898
+      butterfly_13: -279982195315939781
+      butterfly_14: 8016187688196107647
+      butterfly_15: 6510696357092688662
+      butterfly_16: 8365785308237840642
+      butterfly_17: 1595405274787163183
+      butterfly_18: 2842609670921437519
+      butterfly_19: 7730829964129720510
+      butterfly_2: -6652040253308469137
+      butterfly_20: 1957919318109991461
+      butterfly_21: 8825968719579762314
+      butterfly_22: 4063850816475994748
+      butterfly_23: -2005978413291572856
+      butterfly_24: 2228910415312809026
+      butterfly_25: 2349486123440874215
+      butterfly_26: -3030812186950942862
+      butterfly_27: -8154452325902183081
+      butterfly_28: 5547520756319297110
+      butterfly_29: -7879060649799984851
+      butterfly_3: 376128994888015576
+      butterfly_30: 2134534800706292581
+      butterfly_31: 1455456525539251430
+      butterfly_32: -1375446327165466554
+      butterfly_33: -5901912221603948758
+      butterfly_34: -6592656642670601079
+      butterfly_35: -2370694661403762727
+      butterfly_36: 6552920689078142977
+      butterfly_37: -2225217050362903559
+      butterfly_38: 2795265386273470727
+      butterfly_39: 2031819244893624100
+      butterfly_4: -3358037754572505476
+      butterfly_40: 5286855052106698555
+      butterfly_41: 2964183776483538619
+      butterfly_42: -3491148137487400157
+      butterfly_43: -8538061373253329932
+      butterfly_44: -6339736889566423605
+      butterfly_45: -6955523885408977143
+      butterfly_46: -3444751204404930977
+      butterfly_47: 2954024715857471520
+      butterfly_48: -304361370529136072
+      butterfly_49: 6942837611513639108
+      butterfly_5: 7034802639847472172
+      butterfly_50: 1743208060740485360
+      butterfly_51: 8931187097957311872
+      butterfly_52: 4196067160935977503
+      butterfly_53: -8170689122656137151
+      butterfly_54: -2232770822818495525
+      butterfly_55: -4678709810152005970
+      butterfly_56: -7174140644031425664
+      butterfly_57: 9095912462709181640
+      butterfly_58: 6179658594397798295
+      butterfly_59: 4650758971583302534
+      butterfly_6: -3405709844502953145
+      butterfly_60: -7323833999749179641
+      butterfly_61: -2338596254127846607
+      butterfly_62: 5955340227956934246
+      butterfly_63: 899961192551857642
+      butterfly_64: 5994894339394647186
+      butterfly_65: -7843088199700247206
+      butterfly_66: 500607176781924567
+      butterfly_67: 8034571003518986278
+      butterfly_68: 3158813260976435383
+      butterfly_69: -2971797843931679064
+      butterfly_7: 5472189599685185468
+      butterfly_70: 2087001127977428690
+      butterfly_71: 2078451321762083817
+      butterfly_72: 3373000405730066346
+      butterfly_73: 3409801037530078830
+      butterfly_74: -7876415932739316611
+      butterfly_75: 3414700162012766738
+      butterfly_76: 2640856594656211682
+      butterfly_77: -5971999731077537045
+      butterfly_78: 2324728078970092312
+      butterfly_79: 7204852793453291104
+      butterfly_8: 2136224990828970419
+      butterfly_80: 3696867775584397031
+      butterfly_81: -8500444782373211042
+      butterfly_82: 9158551838951037598
+      butterfly_83: 3620086499090198211
+      butterfly_84: -6445767075432771054
+      butterfly_85: 2902952886756923175
+      butterfly_86: 1382257528771145930
+      butterfly_87: -725268747296140220
+      butterfly_88: -4545374626226258017
+      butterfly_89: -5625770728047305320
+      butterfly_9: 2276130241825236277
+      butterfly_90: 1353281119878365401
+      butterfly_91: 2273223267078299987
+      butterfly_92: -7003726448228515298
+      butterfly_93: -51250855614094078
+      butterfly_94: -2123226798961895427
+      butterfly_95: 7693820495092353846
+      butterfly_96: 7835545411115096331
+      butterfly_97: -1738474969516066560
+      butterfly_98: 1799730017619297637
+      butterfly_99: -3682820149507262437
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -16,6 +16,7 @@ public class Monster : MonoBehaviour
     private Transform player;
     private Transform playertower;
     public float Hp = 10;
+    public GameObject hitEffectPrefab;
 
     private bool isDying = false;
     private float originalMoveSpeed;
@@ -123,12 +124,17 @@ public class Monster : MonoBehaviour
         if (isDying) return;
 
         Hp -= damage;
+        Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+       
+
 
         if (Hp <= 0)
         {
             Hp = 0;
             Die();
-            Instantiate(coin, transform.position,Quaternion.identity);
+
+            GameObject damageEffect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+            Destroy(damageEffect, 1.0f);  // ÀÌÆåÆ®´Â 1ÃÊ ÈÄ¿¡ ÆÄ±«
 
         }
         else

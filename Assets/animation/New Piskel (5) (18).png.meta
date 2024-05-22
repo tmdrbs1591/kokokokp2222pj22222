@@ -63,7 +63,7 @@ TextureImporter:
       213: -1414653167418159125
     second: New Piskel (5) (18)_19
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -80,10 +80,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -122,6 +124,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -133,6 +137,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -145,6 +150,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -580,9 +612,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      New Piskel (5) (18)_0: -1960473820002135979
+      New Piskel (5) (18)_1: -6146460253559545566
+      New Piskel (5) (18)_10: 3108457524430693913
+      New Piskel (5) (18)_11: -1069488309296511221
+      New Piskel (5) (18)_12: 2785830801622427535
+      New Piskel (5) (18)_13: 6728295739211542038
+      New Piskel (5) (18)_14: -6249589674284203587
+      New Piskel (5) (18)_15: 5904666913825218059
+      New Piskel (5) (18)_16: -1388073023649807649
+      New Piskel (5) (18)_17: 7036813391189194968
+      New Piskel (5) (18)_18: 1868404976504618946
+      New Piskel (5) (18)_19: -1414653167418159125
+      New Piskel (5) (18)_2: 307874029714862107
+      New Piskel (5) (18)_3: -4760348438461285277
+      New Piskel (5) (18)_4: 5721817832330196206
+      New Piskel (5) (18)_5: -469418233323909382
+      New Piskel (5) (18)_6: 8695190602384090106
+      New Piskel (5) (18)_7: -8351352303285683470
+      New Piskel (5) (18)_8: 5074741613363099454
+      New Piskel (5) (18)_9: -4320777008290487374
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
